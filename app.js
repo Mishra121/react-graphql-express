@@ -33,7 +33,7 @@ app.use('/graphql', graphqlHttp({
 );
 
 mongoose
-.connect(`mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0-epdca.mongodb.net/${process.env.MONGO_DB}?retryWrites=true&w=majority`)
+.connect(`mongodb://localhost:27017/graphyreact`)
 .then(() => {
     app.listen(8000);
 })
